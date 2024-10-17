@@ -2,99 +2,67 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="grid grid-rows items-center justify-items-center min-h-screen   my-4  text-black font-[family-name:var(--font-geist-sans)]">
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
+      {/* Navbar */}
+      <header className="w-full flex justify-between items-center px-8  ">
+        <h1 className="text-3xl font-bold">Astrosapientes</h1>
+        <nav className="flex gap-4">
+          <a href="#articles" className="hover:text-gray-700">Articles</a>
+          <a href="#about" className="hover:text-gray-700">About</a>
+          <a href="#contact" className="hover:text-gray-700">Contact</a>
+        </nav>
+      </header>
+
+      {/* Hero Section */}
+      <main className="flex flex-col my-14 gap-8 row-start-2 items-center text-center sm:items-start">
+        <h2 className="text-4xl sm:text-6xl font-bold">
+          Explore the Universe
+        </h2>
+        <p className="text-lg sm:text-xl max-w-lg">
+          Discover the wonders of the cosmos, delve into the mysteries of space, and explore scientific articles on astronomy and astrophysics.
+        </p>
+
+        {/* Add a beautiful space image */}
+        <div className="relative w-full max-w-3xl h-96 -my-28">
+          <Image
+          alt="space image"
+            src="https://yt3.googleusercontent.com/6e1m74VPlW9GJs8_sP5quw6M2myjX3InGa7S0cqVZP7lIA7XXLf6XHdSZ-Zg8_Br4edlXNAW7Q=w2120-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj"
+            layout="fill"
+            objectFit="contain"
+            className="rounded-lg shadow-lg "
+          />
+        </div>
+
+
+        <div className="flex gap-4 mt-6">
           <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#articles"
+            className="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-black rounded-lg"
           >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
+            View Articles
           </a>
           <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#about"
+            className="px-6 py-3 border border-gray-700 hover:bg-gray-700 hover:text-black rounded-lg"
           >
-            Read our docs
+            Learn More
           </a>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
+
+      {/* Footer */}
+      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center w-full py-4">
+        <a href="https://twitter.com/astrosapientes" target="_blank" rel="noopener noreferrer" className="hover:text-gray-700">
+          Twitter
         </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
+        <a href="https://instagram.com/astrosapientes" target="_blank" rel="noopener noreferrer" className="hover:text-gray-700">
+          Instagram
         </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
+        <a href="https://youtube.com/astrosapientes" target="_blank" rel="noopener noreferrer" className="hover:text-gray-700">
+          YouTube
         </a>
+        <p className="text-sm">© 2024 Astrosapientes. All rights reserved.</p>
       </footer>
     </div>
   );
